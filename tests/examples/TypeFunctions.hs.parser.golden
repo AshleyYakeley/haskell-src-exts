@@ -175,59 +175,66 @@ ParseOk
                 , SrcSpan "tests/examples/TypeFunctions.hs" 7 24 7 25
                 ]
             }
-          (TyApp
+          (IRule
              SrcSpanInfo
                { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 23
                , srcInfoPoints = []
                }
-             (TyApp
+             Nothing
+             Nothing
+             (IHApp
                 SrcSpanInfo
-                  { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 21
+                  { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 23
                   , srcInfoPoints = []
                   }
-                (TyCon
+                (IHApp
                    SrcSpanInfo
-                     { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 18
+                     { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 21
                      , srcInfoPoints = []
                      }
-                   (UnQual
+                   (IHCon
                       SrcSpanInfo
                         { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 18
                         , srcInfoPoints = []
                         }
-                      (Ident
+                      (UnQual
                          SrcSpanInfo
                            { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 18
                            , srcInfoPoints = []
                            }
-                         "Rep")))
-                (TyCon
-                   SrcSpanInfo
-                     { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 19 7 21
-                     , srcInfoPoints = []
-                     }
-                   (UnQual
+                         (Ident
+                            SrcSpanInfo
+                              { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 15 7 18
+                              , srcInfoPoints = []
+                              }
+                            "Rep")))
+                   (TyCon
                       SrcSpanInfo
                         { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 19 7 21
                         , srcInfoPoints = []
                         }
-                      (Ident
+                      (UnQual
                          SrcSpanInfo
                            { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 19 7 21
                            , srcInfoPoints = []
                            }
-                         "Id"))))
-             (TyVar
-                SrcSpanInfo
-                  { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 22 7 23
-                  , srcInfoPoints = []
-                  }
-                (Ident
+                         (Ident
+                            SrcSpanInfo
+                              { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 19 7 21
+                              , srcInfoPoints = []
+                              }
+                            "Id"))))
+                (TyVar
                    SrcSpanInfo
                      { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 22 7 23
                      , srcInfoPoints = []
                      }
-                   "x")))
+                   (Ident
+                      SrcSpanInfo
+                        { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 22 7 23
+                        , srcInfoPoints = []
+                        }
+                      "x"))))
           (TyVar
              SrcSpanInfo
                { srcInfoSpan = SrcSpan "tests/examples/TypeFunctions.hs" 7 26 7 27

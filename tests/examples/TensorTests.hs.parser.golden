@@ -792,58 +792,56 @@ ParseOk
                 , SrcSpan "tests/examples/TensorTests.hs" 19 38 19 39
                 ]
             }
-          (TyApp
+          (IRule
              SrcSpanInfo
                { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 37
                , srcInfoPoints = []
                }
-             (TyApp
+             Nothing
+             Nothing
+             (IHApp
                 SrcSpanInfo
-                  { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 29
+                  { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 37
                   , srcInfoPoints = []
                   }
-                (TyCon
+                (IHApp
                    SrcSpanInfo
-                     { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 20
+                     { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 29
                      , srcInfoPoints = []
                      }
-                   (UnQual
+                   (IHCon
                       SrcSpanInfo
                         { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 20
                         , srcInfoPoints = []
                         }
-                      (Ident
+                      (UnQual
                          SrcSpanInfo
                            { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 20
                            , srcInfoPoints = []
                            }
-                         "Apply")))
-                (TyCon
-                   SrcSpanInfo
-                     { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 21 19 29
-                     , srcInfoPoints = []
-                     }
-                   (UnQual
+                         (Ident
+                            SrcSpanInfo
+                              { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 15 19 20
+                              , srcInfoPoints = []
+                              }
+                            "Apply")))
+                   (TyCon
                       SrcSpanInfo
                         { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 21 19 29
                         , srcInfoPoints = []
                         }
-                      (Ident
+                      (UnQual
                          SrcSpanInfo
                            { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 21 19 29
                            , srcInfoPoints = []
                            }
-                         "Liftable"))))
-             (TyPromoted
-                SrcSpanInfo
-                  { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 30 19 37
-                  , srcInfoPoints =
-                      [ SrcSpan "tests/examples/TensorTests.hs" 19 30 19 31
-                      , SrcSpan "tests/examples/TensorTests.hs" 19 33 19 34
-                      , SrcSpan "tests/examples/TensorTests.hs" 19 36 19 37
-                      ]
-                  }
-                (PromotedTuple
+                         (Ident
+                            SrcSpanInfo
+                              { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 21 19 29
+                              , srcInfoPoints = []
+                              }
+                            "Liftable"))))
+                (TyPromoted
                    SrcSpanInfo
                      { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 30 19 37
                      , srcInfoPoints =
@@ -852,29 +850,38 @@ ParseOk
                          , SrcSpan "tests/examples/TensorTests.hs" 19 36 19 37
                          ]
                      }
-                   [ TyVar
-                       SrcSpanInfo
-                         { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 32 19 33
-                         , srcInfoPoints = []
-                         }
-                       (Ident
+                   (PromotedTuple
+                      SrcSpanInfo
+                        { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 30 19 37
+                        , srcInfoPoints =
+                            [ SrcSpan "tests/examples/TensorTests.hs" 19 30 19 31
+                            , SrcSpan "tests/examples/TensorTests.hs" 19 33 19 34
+                            , SrcSpan "tests/examples/TensorTests.hs" 19 36 19 37
+                            ]
+                        }
+                      [ TyVar
                           SrcSpanInfo
                             { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 32 19 33
                             , srcInfoPoints = []
                             }
-                          "m")
-                   , TyVar
-                       SrcSpanInfo
-                         { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 34 19 36
-                         , srcInfoPoints = []
-                         }
-                       (Ident
+                          (Ident
+                             SrcSpanInfo
+                               { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 32 19 33
+                               , srcInfoPoints = []
+                               }
+                             "m")
+                      , TyVar
                           SrcSpanInfo
                             { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 34 19 36
                             , srcInfoPoints = []
                             }
-                          "zq")
-                   ])))
+                          (Ident
+                             SrcSpanInfo
+                               { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 34 19 36
+                               , srcInfoPoints = []
+                               }
+                             "zq")
+                      ]))))
           (TyInfix
              SrcSpanInfo
                { srcInfoSpan = SrcSpan "tests/examples/TensorTests.hs" 19 40 19 61

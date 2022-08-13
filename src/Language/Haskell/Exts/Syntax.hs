@@ -281,7 +281,7 @@ data Decl l
      -- ^ A data OR newtype declaration, GADT style
      | DataFamDecl  l {-data-}      (Maybe (Context l)) (DeclHead l) (Maybe (ResultSig l))
      -- ^ A data family declaration
-     | TypeInsDecl  l (Type l) (Type l)
+     | TypeInsDecl  l (InstRule l) (Type l)
      -- ^ A type family instance declaration
      | DataInsDecl  l (DataOrNew l) (Type l)                  [QualConDecl l] [Deriving l]
      -- ^ A data family instance declaration

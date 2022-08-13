@@ -30,6 +30,7 @@ module Language.Haskell.Exts.ParseUtils (
     , checkDataHeader       -- PType -> P (Context,Name,[TyVarBind])
     , checkClassHeader      -- PType -> P (Context,Name,[TyVarBind])
     , checkInstHeader       -- PType -> P (Context,QName,[Type])
+    , checkTypeInstHeader   -- PType -> P (Context,QName,[Type])
     , checkDeriving         -- [PType] -> P [Deriving]
     , checkPattern          -- PExp -> P Pat
     , checkExpr             -- PExp -> P Exp
@@ -366,6 +367,12 @@ checkInstHeader (TyForall l mtvs _ cs t) = do
     checkInsts (Just l) mtvs cs' t
 checkInstHeader t = checkMultiParam t >> checkInsts Nothing Nothing Nothing t
 
+checkTypeInstHeader :: PType L -> P (InstRule L)
+checkTypeInstHeader (TyParen l t) = checkTypeInstHeader t >>= return . IParen l
+checkTypeInstHeader (TyForall l mtvs _ cs t) = do
+    cs' <- checkSContext cs
+    checkInsts (Just l) mtvs cs' t
+checkTypeInstHeader t = checkInsts Nothing Nothing Nothing t
 
 checkInsts :: Maybe L -> Maybe [TyVarBind L] -> Maybe (S.Context L) -> PType L -> P (InstRule L)
 checkInsts _ mtvs mctxt (TyParen l t) = checkInsts Nothing mtvs mctxt t >>= return . IParen l

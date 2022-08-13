@@ -1796,43 +1796,50 @@ ParseOk
                 , SrcSpan "tests/examples/Vta1.hs" 34 22 34 23
                 ]
             }
-          (TyApp
+          (IRule
              SrcSpanInfo
                { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 15 34 21
                , srcInfoPoints = []
                }
-             (TyCon
+             Nothing
+             Nothing
+             (IHApp
                 SrcSpanInfo
-                  { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 15 34 16
+                  { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 15 34 21
                   , srcInfoPoints = []
                   }
-                (UnQual
+                (IHCon
                    SrcSpanInfo
                      { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 15 34 16
                      , srcInfoPoints = []
                      }
-                   (Ident
+                   (UnQual
                       SrcSpanInfo
                         { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 15 34 16
                         , srcInfoPoints = []
                         }
-                      "F")))
-             (TyCon
-                SrcSpanInfo
-                  { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 17 34 21
-                  , srcInfoPoints = []
-                  }
-                (UnQual
+                      (Ident
+                         SrcSpanInfo
+                           { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 15 34 16
+                           , srcInfoPoints = []
+                           }
+                         "F")))
+                (TyCon
                    SrcSpanInfo
                      { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 17 34 21
                      , srcInfoPoints = []
                      }
-                   (Ident
+                   (UnQual
                       SrcSpanInfo
                         { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 17 34 21
                         , srcInfoPoints = []
                         }
-                      "Char"))))
+                      (Ident
+                         SrcSpanInfo
+                           { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 17 34 21
+                           , srcInfoPoints = []
+                           }
+                         "Char")))))
           (TyCon
              SrcSpanInfo
                { srcInfoSpan = SrcSpan "tests/examples/Vta1.hs" 34 24 34 28

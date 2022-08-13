@@ -608,11 +608,12 @@ that through the 'family' keyword.
 >                          Just (x,a) -> return (ClosedTypeFamDecl (l <** [a]) dh $4 $5 x); }}}
 
 Here there is no special keyword so we must do the check.
->       | 'type' 'instance' truedtype '=' truectype
+>       | 'type' 'instance' ctype '=' truectype
 >                {% do { -- no checkSimpleType $4 since dtype may contain type patterns
 >                        checkEnabled TypeFamilies ;
 >                        let {l = nIS $1 <++> ann $5 <** [$1,$2,$4]};
->                        return (TypeInsDecl l $3 $5) } }
+>                        ih <- checkTypeInstHeader $3;
+>                        return (TypeInsDecl l ih $5) } }
 >       | data_or_newtype ctype constrs0 maybe_derivings
 >                {% do { (cs,dh) <- checkDataHeader $2;
 >                        let { (qds,ss,minf) = $3;
