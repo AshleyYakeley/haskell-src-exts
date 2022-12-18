@@ -80,7 +80,7 @@ Library
                         Language.Haskell.Exts.InternalParser
                         Language.Preprocessor.Unlit
   Hs-source-dirs:       src
-  Ghc-options:          -Wall
+  Ghc-options:          -Wall -Wno-incomplete-uni-patterns
 
 Source-Repository head
         Type:           git

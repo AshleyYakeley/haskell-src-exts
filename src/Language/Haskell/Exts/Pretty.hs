@@ -113,11 +113,10 @@ instance Functor (DocM s) where
 instance Applicative (DocM s) where
         pure = retDocM
         (<*>) = M.ap
+        (*>) = then_DocM
 
 instance Monad (DocM s) where
         (>>=) = thenDocM
-        (>>) = then_DocM
-        return = retDocM
 
 {-# INLINE thenDocM #-}
 {-# INLINE then_DocM #-}
