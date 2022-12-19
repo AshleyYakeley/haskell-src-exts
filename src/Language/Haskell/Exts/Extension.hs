@@ -93,6 +93,8 @@ data Language =
   -- <http://www.haskell.org/onlinereport/haskell2010>
   | Haskell2010
 
+  | GHC2021
+
   -- | The minimal language resulting from disabling all recognized
   -- extensions - including ones that are part of all known language
   -- definitions e.g. MonomorphismRestriction.
@@ -103,7 +105,7 @@ data Language =
   deriving (Show, Read, Eq, Ord, Data, Typeable)
 
 knownLanguages :: [Language]
-knownLanguages = [Haskell98, Haskell2010]
+knownLanguages = [Haskell98, Haskell2010, GHC2021]
 
 classifyLanguage :: String -> Language
 classifyLanguage str = fromMaybe (UnknownLanguage str) $ lookup str langTable
@@ -733,6 +735,53 @@ toExtensionList lang exts' =
                                    , ForeignFunctionInterface
                                    , EmptyDataDecls
                                    ] ++ allLangDefault
+                    GHC2021 ->  [ BangPatterns
+                                , BinaryLiterals
+                                , ConstrainedClassMethods
+                                , ConstraintKinds
+                                , DeriveDataTypeable
+                                , DeriveFoldable
+                                , DeriveFunctor
+                                , DeriveGeneric
+                                --, DeriveLift
+                                , DeriveTraversable
+                                , DoAndIfThenElse
+                                , EmptyCase
+                                , EmptyDataDecls
+                                --, EmptyDataDeriving
+                                , ExistentialQuantification
+                                , ExplicitForAll
+                                --, FieldSelectors
+                                , FlexibleContexts
+                                , FlexibleInstances
+                                , ForeignFunctionInterface
+                                --, GADTSyntax
+                                --, GeneralisedNewtypeDeriving
+                                --, HexFloatLiterals
+                                , ImplicitPrelude
+                                --, ImportQualifiedPost
+                                , InstanceSigs
+                                , KindSignatures
+                                , MonomorphismRestriction
+                                , MultiParamTypeClasses
+                                , NamedFieldPuns
+                                , NamedWildCards
+                                --, NumericUnderscores
+                                , PatternGuards
+                                , PolyKinds
+                                , PostfixOperators
+                                , RankNTypes
+                                , RelaxedPolyRec
+                                , ScopedTypeVariables
+                                , StandaloneDeriving
+                                , StandaloneKindSignatures
+                                --, StarIsType
+                                --, TraditionalRecordSyntax
+                                , TupleSections
+                                , TypeApplications
+                                , TypeOperators
+                                , TypeSynonymInstances
+                                ] ++ allLangDefault
                     HaskellAllDisabled -> []
                     UnknownLanguage s ->
                         error $ "toExtensionList: Unknown language " ++ s

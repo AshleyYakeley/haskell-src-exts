@@ -146,7 +146,7 @@ indentOfParseState _                    = 0
 data ParseMode = ParseMode {
         -- | original name of the file being parsed
         parseFilename :: String,
-        -- | base language (e.g. Haskell98, Haskell2010)
+        -- | base language (e.g. Haskell98, Haskell2010, GHC2021)
         baseLanguage :: Language,
         -- | list of extensions enabled for parsing
         extensions :: [Extension],
