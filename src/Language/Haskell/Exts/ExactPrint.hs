@@ -2015,6 +2015,7 @@ instance ExactP Pat where
     PSplice _ sp  -> exactP sp
     PQuasiQuote _ name qt   -> printString $ "[$" ++ name ++ "|" ++ qt ++ "]"
     PBangPat _ p    -> printString "!" >> exactPC p
+    PTypeApp _ ty -> printString "@" >> exactP ty
 
 instance ExactP PatField where
   exactP pf = case pf of

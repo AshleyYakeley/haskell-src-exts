@@ -1192,6 +1192,7 @@ instance  Pretty (Pat l) where
         prettyPrec _ (PBangPat _ pat) = text "!" <> prettyPrec 3 pat
         prettyPrec _ (PSplice _ s) = pretty s
         prettyPrec _ (PQuasiQuote _ n qt) = text ("[$" ++ n ++ "|" ++ qt ++ "|]")
+        prettyPrec _ (PTypeApp _ ty) = char '@' <> pretty ty
 
 instance  Pretty (PXAttr l) where
         pretty (PXAttr _ n p) =

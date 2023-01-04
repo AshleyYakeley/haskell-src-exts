@@ -938,6 +938,7 @@ data Pat l
     | PSplice l (Splice l)                  -- ^ template haskell splice pattern
     | PQuasiQuote l String String           -- ^ quasi quote pattern: @[$/name/| /string/ |]@
     | PBangPat l (Pat l)                    -- ^ strict (bang) pattern: @f !x = ...@
+    | PTypeApp l (Type l)                   -- ^ Visible type application
   deriving (Eq,Ord,Show,Typeable,Data,Foldable,Traversable,Functor,Generic)
 
 -- | An XML attribute in a pattern.
@@ -1844,6 +1845,7 @@ instance Annotated Pat where
       PSplice l _       -> l
       PQuasiQuote l _ _ -> l
       PBangPat l _      -> l
+      PTypeApp l _      -> l
     amap f p1 = case p1 of
       PVar l n          -> PVar (f l) n
       PLit l sg lit     -> PLit (f l) sg lit
@@ -1869,6 +1871,7 @@ instance Annotated Pat where
       PSplice l sp      -> PSplice (f l) sp
       PQuasiQuote l sn st   -> PQuasiQuote (f l) sn st
       PBangPat l p          -> PBangPat (f l) p
+      PTypeApp l p          -> PTypeApp (f l) p
 
 instance Annotated PXAttr where
     ann (PXAttr l _ _) = l

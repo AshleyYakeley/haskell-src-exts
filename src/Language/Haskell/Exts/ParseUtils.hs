@@ -533,6 +533,9 @@ checkPat e' [] = case e' of
         p <- checkPat e []
         return $ PBangPat l p
 
+    -- Hole
+    TypeApp l ty   -> return $ PTypeApp l ty
+
     e -> patFail $ prettyPrint e
 
 checkPat e _ = patFail $ prettyPrint e
