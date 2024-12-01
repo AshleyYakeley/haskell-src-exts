@@ -51,7 +51,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Language.Haskell.TH"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

@@ -95,7 +95,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "GHC.OverloadedLabels"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

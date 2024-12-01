@@ -412,7 +412,7 @@ instance ExactP ImportDecl where
                      return pts'
                   _ -> errorEP "ExactP: ImportDecl is given too few srcInfoPoints"
                 else return pts1
-        pts3 <- if qf then
+        pts3 <- if qf == Just False then
                  case pts2 of
                   x:pts' -> do
                      printStringAt (pos x) "qualified"
@@ -428,15 +428,22 @@ instance ExactP ImportDecl where
                    _ -> errorEP "ExactP: ImportDecl is given too few srcInfoPoints"
                 _ -> return pts3
         exactPC mn
+        pts5 <- if qf == Just True then
+                 case pts4 of
+                  x:pts' -> do
+                     printStringAt (pos x) "qualified"
+                     return pts'
+                  _ -> errorEP "ExactP: ImportDecl is given too few srcInfoPoints"
+                else return pts4
         _ <- case mas of
                 Just as ->
-                 case pts4 of
+                 case pts5 of
                   x:pts' -> do
                      printStringAt (pos x) "as"
                      exactPC as
                      return pts'
                   _ -> errorEP "ExactP: ImportDecl is given too few srcInfoPoints"
-                _ -> return pts4
+                _ -> return pts5
         case mispecs of
          Nothing -> return ()
          Just ispecs -> exactPC ispecs

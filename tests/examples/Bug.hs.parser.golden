@@ -25,7 +25,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Test.QuickCheck"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

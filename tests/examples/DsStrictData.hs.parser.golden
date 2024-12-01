@@ -88,7 +88,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Exception"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -116,7 +116,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.IO.Unsafe"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

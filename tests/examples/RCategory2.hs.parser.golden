@@ -50,7 +50,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "GHC.Prim"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

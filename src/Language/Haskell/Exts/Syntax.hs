@@ -228,7 +228,7 @@ data Namespace l = NoNamespace l | TypeNamespace l | PatternNamespace l
 data ImportDecl l = ImportDecl
     { importAnn :: l                   -- ^ annotation, used by parser for position of the @import@ keyword.
     , importModule :: ModuleName l     -- ^ name of the module imported.
-    , importQualified :: Bool          -- ^ imported @qualified@?
+    , importQualified :: Maybe Bool    -- ^ imported @qualified@? postpositive = Just True, prepostive = Just False
     , importSrc :: Bool                -- ^ imported with @{-\# SOURCE \#-}@?
     , importSafe :: Bool               -- ^ Import @safe@?
     , importPkg :: Maybe String        -- ^ imported with explicit package name

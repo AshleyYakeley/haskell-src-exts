@@ -355,9 +355,10 @@ instance  Pretty (ImportDecl l) where
                 mySep [text "import",
                        if src  then text "{-# SOURCE #-}" else empty,
                        if safe then text "safe" else empty,
-                       if qual then text "qualified" else empty,
+                       if qual == Just False then text "qualified" else empty,
                        maybePP (\s -> text (show s)) mbPkg,
                        pretty m,
+                       if qual == Just True then text "qualified" else empty,
                        maybePP (\m' -> text "as" <+> pretty m') mbName,
                        maybePP pretty mbSpecs]
 

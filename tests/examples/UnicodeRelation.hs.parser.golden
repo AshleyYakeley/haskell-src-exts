@@ -51,7 +51,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude.Unicode"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

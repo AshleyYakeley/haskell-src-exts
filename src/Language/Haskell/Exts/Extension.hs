@@ -258,6 +258,8 @@ data KnownExtension =
   -- @Prelude@ -- version.
   | ImplicitPrelude
 
+  | ImportQualifiedPost
+
   -- | [GHC &#xa7; 7.3.15] Enable syntax for implicitly binding local names
   -- corresponding to the field names of a record.  Puns bind specific
   -- names, unlike 'RecordWildCards'.
@@ -759,7 +761,7 @@ toExtensionList lang exts' =
                                 --, GeneralisedNewtypeDeriving
                                 --, HexFloatLiterals
                                 , ImplicitPrelude
-                                --, ImportQualifiedPost
+                                , ImportQualifiedPost
                                 , InstanceSigs
                                 , KindSignatures
                                 , MonomorphismRestriction

@@ -49,7 +49,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Array.Repa"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -111,7 +111,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Array.Repa"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -173,7 +173,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Array.Repa"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

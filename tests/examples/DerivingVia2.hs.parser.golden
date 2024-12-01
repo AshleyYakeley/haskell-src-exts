@@ -188,7 +188,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Applicative"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -209,7 +209,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Functor.Compose"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -230,7 +230,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Proxy"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -251,7 +251,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Semigroup"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

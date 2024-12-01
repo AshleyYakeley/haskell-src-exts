@@ -115,7 +115,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "GHC.Exts"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -135,7 +135,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

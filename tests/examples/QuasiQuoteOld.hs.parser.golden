@@ -46,7 +46,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Here"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

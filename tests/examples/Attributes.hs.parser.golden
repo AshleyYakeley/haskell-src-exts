@@ -2259,7 +2259,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.GraphViz.Attributes.Colors"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2280,7 +2280,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.GraphViz.Util"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2301,7 +2301,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.GraphViz.Parsing"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2322,7 +2322,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.GraphViz.Printing"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2343,7 +2343,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Char"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2389,7 +2389,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Maybe"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2435,7 +2435,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Arrow"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2481,7 +2481,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

@@ -45,7 +45,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = True
           , importPkg = Nothing

@@ -33,7 +33,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Language.Haskell.Exts.Annotated"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -64,7 +64,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Language.Haskell.Exts.Annotated.Syntax"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -95,7 +95,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Language.Haskell.Exts.Extension"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

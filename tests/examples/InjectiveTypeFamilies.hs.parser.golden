@@ -303,7 +303,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "T6018a"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

@@ -501,7 +501,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "CoreSyn"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -522,7 +522,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "OccurAnal"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -565,7 +565,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "CoreFVs"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -644,7 +644,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "CoreUtils"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -699,7 +699,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "PprCore"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -742,7 +742,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Type"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -807,7 +807,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Coercion"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -850,7 +850,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "TcType"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -893,7 +893,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "CoreTidy"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -936,7 +936,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Id"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -957,7 +957,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "IdInfo"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1015,7 +1015,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Var"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1063,7 +1063,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "VarEnv"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1084,7 +1084,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "VarSet"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1105,7 +1105,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Name"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1169,7 +1169,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "NameEnv"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1190,7 +1190,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Unify"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1249,7 +1249,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "BasicTypes"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1297,7 +1297,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "StaticFlags"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1340,7 +1340,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Outputable"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1361,7 +1361,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "FastString"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1382,7 +1382,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Maybes"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1403,7 +1403,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "OrdList"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1424,7 +1424,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Bag"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1445,7 +1445,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Util"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1466,7 +1466,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.List"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

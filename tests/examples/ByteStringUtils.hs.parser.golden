@@ -663,7 +663,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -715,7 +715,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.ByteString"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -749,7 +749,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.ByteString.Char8"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -783,7 +783,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.ByteString.Internal"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -814,7 +814,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.ByteString"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -876,7 +876,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.ByteString.Internal"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -924,7 +924,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Exception"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -972,7 +972,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.IO"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -995,7 +995,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.IO.Unsafe"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1043,7 +1043,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.Storable"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1105,7 +1105,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.Marshal.Alloc"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1153,7 +1153,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.Marshal.Array"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1229,7 +1229,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.C.Types"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1283,7 +1283,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Bits"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1331,7 +1331,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Char"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1407,7 +1407,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Word"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1461,7 +1461,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Int"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1515,7 +1515,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1563,7 +1563,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.Ptr"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1611,7 +1611,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.ForeignPtr"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1665,7 +1665,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.Ptr"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1733,7 +1733,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.ForeignPtr"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1781,7 +1781,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.ForeignPtr"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1829,7 +1829,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.Ptr"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1886,7 +1886,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.ByteString.Lazy"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1920,7 +1920,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Codec.Compression.GZip"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1951,7 +1951,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.C.String"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2019,7 +2019,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.IO.MMap"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2067,7 +2067,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Mem"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -2115,7 +2115,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Posix.Files"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

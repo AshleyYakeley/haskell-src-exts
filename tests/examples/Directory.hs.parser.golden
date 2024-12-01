@@ -648,7 +648,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -694,7 +694,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -715,7 +715,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -758,7 +758,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Environment"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -801,7 +801,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.FilePath"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -822,7 +822,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.IO"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -843,7 +843,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.IO.Error"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -899,7 +899,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -954,7 +954,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Exception.Base"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -975,7 +975,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -996,7 +996,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Foreign.C"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1017,7 +1017,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Time"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1064,7 +1064,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "GHC.IO.Exception"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1139,7 +1139,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Posix.Types"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1160,7 +1160,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Posix.Internals"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -1184,7 +1184,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "System.Win32"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

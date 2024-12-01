@@ -462,7 +462,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Void"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -483,7 +483,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Complex"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -504,7 +504,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Functor.Const"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -525,7 +525,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Functor.Identity"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -546,7 +546,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Ratio"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -567,7 +567,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad.Reader"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -588,7 +588,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad.State"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -609,7 +609,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Monad.Writer"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -630,7 +630,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Control.Applicative"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -678,7 +678,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Bifunctor"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -699,7 +699,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Monoid"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -720,7 +720,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Data.Kind"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

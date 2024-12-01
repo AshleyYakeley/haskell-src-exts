@@ -45,7 +45,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Language.Haskell.TH"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -66,7 +66,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "THTypedSplices.Defs"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing

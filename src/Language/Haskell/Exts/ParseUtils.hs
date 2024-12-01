@@ -18,6 +18,7 @@
 
 module Language.Haskell.Exts.ParseUtils (
       splitTyConApp         -- PType -> P (Name,[Type])
+    , isEnabled
     , checkEnabled          -- (Show e, Enabled e) => e -> P ()
     , checkEnabledOneOf
     , checkToplevel         -- ??

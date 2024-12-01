@@ -84,7 +84,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "Prelude"
-          , importQualified = True
+          , importQualified = Just False
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
@@ -104,7 +104,7 @@ ParseOk
                   , srcInfoPoints = []
                   }
                 "GHC.Prim"
-          , importQualified = False
+          , importQualified = Nothing
           , importSrc = False
           , importSafe = False
           , importPkg = Nothing
