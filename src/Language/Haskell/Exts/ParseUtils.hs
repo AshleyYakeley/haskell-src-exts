@@ -326,6 +326,10 @@ checkSimple kw (TyApp l h t) = do
   tvb <- mkTyVarBind kw t
   h' <- checkSimple kw h
   return $ DHApp l h' tvb
+checkSimple kw (TyTypeApp l h t) = do
+  h' <- checkSimple kw h
+  t' <- checkT t False
+  return $ DHTypeApp l h' t'
 checkSimple kw (TyInfix l t1 mq t2)
   | c@(UnQual _ t) <- getMaybePromotedQName mq
   = do
@@ -1110,6 +1114,7 @@ checkT t simple = case t of
     TyList  l pt      -> check1Type pt (S.TyList l)
     TyParArray l pt   -> check1Type pt (S.TyParArray l)
     TyApp   l ft at   -> check2Types ft at (S.TyApp l)
+    TyTypeApp   l ft at   -> check2Types ft at (S.TyTypeApp l)
     TyVar   l n       -> return $ S.TyVar l n
     TyCon   l n       -> do
             checkAndWarnTypeOperators n

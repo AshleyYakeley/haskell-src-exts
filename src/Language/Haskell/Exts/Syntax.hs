@@ -420,6 +420,7 @@ data DeclHead l
     | DHInfix l (TyVarBind l) (Name l) -- ^ infix application of the type/class name to the left operand
     | DHParen l (DeclHead l) -- ^ parenthesized declaration head
     | DHApp   l (DeclHead l) (TyVarBind l) -- ^ application to one more type variable
+    | DHTypeApp   l (DeclHead l) (Type l) -- ^ type application
   deriving (Eq,Ord,Show,Typeable,Data,Foldable,Traversable,Functor,Generic)
 
 -- | The instance declaration rule, which is, roughly, the part of the instance declaration before the @where@ keyword.
@@ -641,6 +642,7 @@ data Type l
      | TyList  l (Type l)                       -- ^ list syntax, e.g. [a], as opposed to [] a
      | TyParArray  l (Type l)                   -- ^ parallel array syntax, e.g. [:a:]
      | TyApp   l (Type l) (Type l)              -- ^ application of a type constructor
+     | TyTypeApp l (Type l) (Type l)            -- ^ application of a type abstraction
      | TyVar   l (Name l)                       -- ^ type variable
      | TyCon   l (QName l)                      -- ^ named type or type constructor
      | TyParen l (Type l)                       -- ^ type surrounded by parentheses
@@ -1399,10 +1401,12 @@ instance Annotated DeclHead where
     ann (DHInfix l _ _)          = l
     ann (DHParen l _)            = l
     ann (DHApp l _ _)            = l
+    ann (DHTypeApp l _ _)        = l
     amap f (DHead l n)           = DHead (f l) n
     amap f (DHInfix l tva n)     = DHInfix (f l) tva n
     amap f (DHParen l dh)        = DHParen (f l) dh
     amap f (DHApp l dh t)        = DHApp (f l) dh t
+    amap f (DHTypeApp l dh t)    = DHTypeApp (f l) dh t
 
 instance Annotated InstRule where
     ann (IRule l _ _ _)         = l
@@ -1520,6 +1524,7 @@ instance Annotated Type where
       TyList  l _                   -> l
       TyParArray  l _               -> l
       TyApp   l _ _                 -> l
+      TyTypeApp l _ _               -> l
       TyVar   l _                   -> l
       TyCon   l _                   -> l
       TyParen l _                   -> l
@@ -1540,6 +1545,7 @@ instance Annotated Type where
       TyList  l t                   -> TyList (f l) t
       TyParArray  l t               -> TyParArray (f l) t
       TyApp   l t1' t2              -> TyApp (f l) t1' t2
+      TyTypeApp l t1' t2            -> TyTypeApp (f l) t1' t2
       TyVar   l n                   -> TyVar (f l) n
       TyCon   l qn                  -> TyCon (f l) qn
       TyParen l t                   -> TyParen (f l) t

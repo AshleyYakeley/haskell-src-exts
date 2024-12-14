@@ -670,6 +670,7 @@ instance Pretty (DeclHead l) where
   pretty (DHInfix _ tv n) =  pretty tv <+> ppNameInfix n
   pretty (DHParen _ d) = parens (pretty d)
   pretty (DHApp _ dh tv) = pretty dh <+> pretty tv
+  pretty (DHTypeApp _ dh tv) = pretty dh <+> (text "@" <> pretty tv)
 
 
 
@@ -872,6 +873,8 @@ instance  Pretty (Type l) where
                 | a == list_tycon = brackets $ pretty b         -- special case
                 | otherwise = -} parensIf (p > prec_btype) $
                                     myFsep [pretty a, ppAType b]
+        prettyPrec p (TyTypeApp _ a b) =
+                parensIf (p > prec_btype) $ myFsep [pretty a, text "@" <> prettyPrec prec_atype b]
         prettyPrec _ (TyVar _ name) = pretty name
         prettyPrec _ (TyCon _ name) = pretty name
         prettyPrec _ (TyParen _ t) = parens (pretty t)
@@ -1701,6 +1704,8 @@ instance SrcInfo loc => Pretty (P.PType loc) where
                 | a == list_tycon = brackets $ pretty b         -- special case
                 | otherwise = -} parensIf (p > prec_btype) $
                                     myFsep [pretty a, prettyPrec prec_atype b]
+        prettyPrec p (P.TyTypeApp _ a b) =
+                parensIf (p > prec_btype) $ myFsep [pretty a, text "@" <> prettyPrec prec_atype b]
         prettyPrec _ (P.TyVar _ name) = pretty name
         prettyPrec _ (P.TyCon _ name) = pretty name
         prettyPrec _ (P.TyParen _ t) = parens (pretty t)

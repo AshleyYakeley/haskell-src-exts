@@ -311,6 +311,7 @@ data PType l
      | TyList  l (PType l)                      -- ^ list syntax, e.g. [a], as opposed to [] a
      | TyParArray l (PType l)                   -- ^ parallel array syntax, e.g. [:a:]
      | TyApp   l (PType l) (PType l)            -- ^ application of a type constructor
+     | TyTypeApp l (PType l) (PType l)          -- ^ application of a type abstraction
      | TyVar   l (Name l)                       -- ^ type variable
      | TyCon   l (QName l)                      -- ^ named type or type constructor
      | TyParen l (PType l)                      -- ^ type surrounded by parentheses
@@ -335,6 +336,7 @@ instance Annotated PType where
       TyList  l _                   -> l
       TyParArray  l _               -> l
       TyApp   l _ _                 -> l
+      TyTypeApp   l _ _                 -> l
       TyVar   l _                   -> l
       TyCon   l _                   -> l
       TyParen l _                   -> l
@@ -356,6 +358,7 @@ instance Annotated PType where
       TyList  l t                   -> TyList (f l) t
       TyParArray  l t               -> TyParArray (f l) t
       TyApp   l t1 t2               -> TyApp (f l) t1 t2
+      TyTypeApp   l t1 t2           -> TyTypeApp (f l) t1 t2
       TyVar   l n                   -> TyVar (f l) n
       TyCon   l qn                  -> TyCon (f l) qn
       TyParen l t                   -> TyParen (f l) t

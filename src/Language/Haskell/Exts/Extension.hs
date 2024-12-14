@@ -538,6 +538,8 @@ data KnownExtension =
   -- equivalent to `foo :: _`.
   | NamedWildCards
 
+  | TypeAbstractions
+
   | TypeApplications
 
   | TypeFamilyDependencies
@@ -603,6 +605,7 @@ impliesExts = go
                     TypeFamilyDependencies -> [TypeFamilies]
                     TypeInType          -> [PolyKinds, DataKinds, KindSignatures]
                     TypeOperators       -> [ExplicitNamespaces]
+                    TypeAbstractions    -> [TypeApplications]
                     -- Deprecations
                     RecordPuns          -> [NamedFieldPuns]
                     PatternSignatures   -> [ScopedTypeVariables]

@@ -1003,6 +1003,7 @@ instance ExactP DeclHead where
          [_,b] -> printString "(" >> exactPC dh >> printStringAt (pos b) ")"
          _ -> errorEP "ExactP: DeclHead: DeclParen is given wrong number of srcInfoPoints"
     DHApp   _ dh t      -> exactP dh >> exactPC t
+    DHTypeApp   _ dh t  -> exactP dh >> printString "@" >> exactPC t
 
 instance ExactP InstRule where
   exactP ih' = case ih' of
@@ -1103,6 +1104,10 @@ instance ExactP Type where
             printStringAt (pos b) ":]"
          _ -> errorEP "ExactP: Type: TyParArray is given wrong number of srcInfoPoints"
     TyApp   _ t1 t2 -> exactP t1 >> exactPC t2
+    TyTypeApp   _ t1 t2 -> do
+        exactP t1
+        printString "@"
+        exactPC t2
     TyVar   _ n     -> exactP n
     TyCon   _ qn    -> exactP qn
     TyParen l t     ->

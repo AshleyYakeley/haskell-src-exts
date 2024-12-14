@@ -1001,7 +1001,8 @@ Implicit parameters can occur in normal types, as well as in contexts.
 >       : btype_('*',NEVER)             { $1 }
 
 > btype_(ostar,kstar) :: { PType L }
->       : btype_(ostar,kstar) atype_(ostar,kstar) { TyApp ($1 <> $2) $1 $2 }
+>       : btype_(ostar,kstar) atype_(ostar,kstar)           { TyApp ($1 <> $2) $1 $2 }
+>       | btype_(ostar,kstar) TYPEAPP atype_(ostar,kstar)   { TyTypeApp ($1 <> $3) $1 $3 }
 >       | atype_(ostar,kstar)           { $1 }
 
 UnboxedTuples requires the extension, but that will be handled through
