@@ -911,6 +911,8 @@ instance  Pretty (Promoted l) where
 instance  Pretty (TyVarBind l) where
         pretty (KindedVar _ var kind) = parens $ myFsep [pretty var, text "::", pretty kind]
         pretty (UnkindedVar _ var)    = pretty var
+        pretty (ImplicitKindedVar _ var kind) = braces $ myFsep [pretty var, text "::", pretty kind]
+        pretty (ImplicitVar _ var)    = braces $ pretty var
 
 ppForall :: Maybe [TyVarBind l] -> QuantVisibility -> Doc
 ppForall Nothing _  = empty

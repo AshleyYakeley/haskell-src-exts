@@ -684,6 +684,8 @@ data QuantVisibility
 data TyVarBind l
     = KindedVar   l (Name l) (Kind l)  -- ^ variable binding with kind annotation
     | UnkindedVar l (Name l)           -- ^ ordinary variable binding
+    | ImplicitVar l (Name l)
+    | ImplicitKindedVar l (Name l) (Kind l)
   deriving (Eq,Ord,Show,Typeable,Data,Foldable,Traversable,Functor,Generic)
 
 -- | An explicit kind annotation.
@@ -1569,8 +1571,12 @@ instance Annotated MaybePromotedName where
 instance Annotated TyVarBind where
     ann (KindedVar   l _ _) = l
     ann (UnkindedVar l _)   = l
+    ann (ImplicitKindedVar   l _ _) = l
+    ann (ImplicitVar l _)   = l
     amap f (KindedVar   l n k) = KindedVar   (f l) n k
     amap f (UnkindedVar l n)   = UnkindedVar (f l) n
+    amap f (ImplicitKindedVar   l n k) = ImplicitKindedVar   (f l) n k
+    amap f (ImplicitVar l n)   = ImplicitVar (f l) n
 
 instance Annotated FunDep where
     ann (FunDep l _ _) = l

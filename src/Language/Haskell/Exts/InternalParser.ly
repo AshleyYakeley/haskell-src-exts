@@ -1144,6 +1144,8 @@ Equality constraints require the TypeFamilies extension.
 > ktyvar :: { TyVarBind L }
 >       : tyvar                         { UnkindedVar (ann $1) $1 }
 >       | '(' tyvar '::' kind ')'       { KindedVar ($1 <^^> $5 <** [$1,$3,$5]) $2 $4 }
+>       | '{' tyvar '}'                 { ImplicitVar (ann $2) $2 }
+>       | '{' tyvar '::' kind '}'       { ImplicitKindedVar ($1 <^^> $5 <** [$1,$3,$5]) $2 $4 }
 
 > tyvars :: { ([Name L],Maybe L) }
 >       : tyvars tyvar                  { ($2 : fst $1, Just (snd $1 <?+> ann $2)) }

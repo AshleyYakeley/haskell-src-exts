@@ -1054,6 +1054,22 @@ instance ExactP TyVarBind where
                     printStringAt (pos c) ")"
                  [] -> exactPC n
                  _ -> errorEP "ExactP: TyVarBind: UnkindedVar is given wrong number of srcInfoPoints"
+  exactP (ImplicitKindedVar   l n k) =
+        case srcInfoPoints l of
+         [_,b,c] -> do
+            printString "{"
+            exactPC n
+            printStringAt (pos b) "::"
+            exactPC k
+            printStringAt (pos c) "}"
+         _ -> errorEP "ExactP: TyVarBind: ImplicitKindedVar is given wrong number of srcInfoPoints"
+  exactP (ImplicitVar l n) =
+        case srcInfoPoints l of
+                 [a,_,c] -> do
+                    printStringAt (pos a) "{"
+                    exactPC n
+                    printStringAt (pos c) "}"
+                 _ -> errorEP "ExactP: TyVarBind: ImplicitVar is given wrong number of srcInfoPoints"
 
 exactQuantVisibility :: QuantVisibility -> String
 exactQuantVisibility InvisibleQuantification = "."
